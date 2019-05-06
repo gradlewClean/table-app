@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { getField, updateField } from 'vuex-map-fields'
-import createPersistedState from 'vuex-persistedstate'
+import { getField, updateField } from 'vuex-map-fields' //connect plugin for heandlig v-model changes
+import createPersistedState from 'vuex-persistedstate' //plugin for add state to LocalStore
 
 Vue.use(Vuex)
 

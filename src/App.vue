@@ -22,7 +22,7 @@
               :employee = 'item'
               :i = 'index'
               v-bind:key = 'index'
-              @remove-employee = 'remove($event)'></tr>
+              @remove-employee = 'remove($event)'></tr> <!-- heandling remove event button -->
         </tbody>
       </table>
     </div>
@@ -31,14 +31,14 @@
 
 <script>
 import EmployeeRow from './components/EmployeeRow.vue'
-import { mapMultiRowFields } from 'vuex-map-fields'
+import { mapMultiRowFields } from 'vuex-map-fields' //for heandling chenges in v-model
 import { mapActions } from 'vuex'
 
 export default {
   name: 'table-app',
   components: { EmployeeRow },
   computed: {
-    ...mapMultiRowFields(['employees'])
+    ...mapMultiRowFields(['employees']) //getter for employees from vuex-map-fields
   },
   methods: { 
     ...mapActions(['add', 'remove'])
